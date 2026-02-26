@@ -28,7 +28,7 @@ namespace Mobiread.Test.ForgotPassword
             Linku_ForgotPassword.Click();
             Fusha_Email.SendKeys("ketjonamema@gmail.com");
             Butoni_Send.Click();
-            Thread.Sleep(2000);
+            
 
 
         }

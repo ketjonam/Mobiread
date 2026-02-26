@@ -28,7 +28,6 @@ namespace Mobiread.Test.Login
             Perform.ClickForgotPassword();
             Console.WriteLine("Test finished.");
 
-            //testcoverage
         }
     }
 }
