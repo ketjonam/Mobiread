@@ -15,7 +15,7 @@ namespace Mobiread.Test.Login
         public void PerformLogin()
         {
             Console.WriteLine("Test started...");   
-            Login login_Succeful = new Login(driver);
+            LoginPage login_Succeful = new LoginPage(driver);
             login_Succeful.PerformLogin();
             Console.WriteLine("Test finished.");
         }

@@ -22,11 +22,6 @@ namespace Mobiread.Test
             driver.Manage().Window.Maximize();
         }
 
-        public void OpenBrowser()
-        {
-            OpenBrowser("https://ukvmr-test.oxana.al/#");
-        }
-
         public void OpenBrowser(string url)
         {
             driver.Navigate().GoToUrl(url);
