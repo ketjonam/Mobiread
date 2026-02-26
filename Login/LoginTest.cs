@@ -27,6 +27,8 @@ namespace Mobiread.Test.Login
             ForgotPasswordPage Perform = new ForgotPasswordPage(driver);
             Perform.ClickForgotPassword();
             Console.WriteLine("Test finished.");
+
+            //testcoverage
         }
     }
 }

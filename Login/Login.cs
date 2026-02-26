@@ -30,6 +30,8 @@ namespace Mobiread.Test.Login
             CheckBox_MeMbajMend.Click();
             Butoni_Hyr.Click();
 
+            Thread.Sleep(2000);
+
         }
     }
 }
