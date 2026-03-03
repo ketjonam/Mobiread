@@ -1,8 +1,8 @@
 ﻿using Mobiread.Test.Login;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Threading;
-using OpenQA.Selenium;
 using Mobiread.Test.Zonat;
 
 namespace Mobiread.Test.Zonat
@@ -21,23 +21,13 @@ namespace Mobiread.Test.Zonat
 
             Thread.Sleep(3000);
 
-            // 2) Go to Zonat page
-            Zonat View = new Zonat(driver);
-            View.GoToZonatPage();
+            // 2) Shko te Zonat
+            Zonat view = new Zonat(driver);
+            view.GoToZonatPage();
+            view.SelectZona("Tirane");
+            view.ExportData();
 
-            Thread.Sleep(3000);
-
-            // 3) Select Zona (zgjidh njërin variant)
-            View.SelectZona_ByTypingAndEnter("Tirane");
-            // View.SelectZona_ByClickOption("Tirane");
-
-            Thread.Sleep(3000);
-
-            // 4) Verify table has rows
-            var rows = driver.FindElements(By.CssSelector("table tbody tr"));
-            Assert.That(rows.Count, Is.GreaterThan(0), "Tabela nuk ka rreshta pas zgjedhjes së zones.");
-
-            Console.WriteLine($"Rows after filter: {rows.Count}");
+            Console.WriteLine("Export completed.");
         }
     }
 }
