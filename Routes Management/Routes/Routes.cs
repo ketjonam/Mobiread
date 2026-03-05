@@ -188,7 +188,6 @@ namespace Mobiread.Routes_Management.Routes
         {
             Thread.Sleep(1500);
 
-            // Gjej input me placeholder "Zone"
             IWebElement input = driver.FindElement(
                 By.XPath("//input[@placeholder='Zone' and @role='combobox']")
             );
@@ -243,7 +242,6 @@ namespace Mobiread.Routes_Management.Routes
             ApplyFilterButton.Click();
             Thread.Sleep(3000);
 
-            // ===== ASSERT =====
 
             var rows = driver.FindElements(By.XPath("//table/tbody/tr"));
 
